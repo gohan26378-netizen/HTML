@@ -1,0 +1,2369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy Birthday Sakshi ♡</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       CUSTOMIZATION
+       ============================================================ */
+
+    :root {
+      --blush: #f8dfe5;
+      --pink: #efb8c5;
+      --lavender: #ded8f5;
+      --blue: #d9eafa;
+      --peach: #f8ddca;
+      --cream: #fffaf5;
+      --gold: #c9a96e;
+      --dark: #4b4146;
+      --muted: #80747a;
+      --white: #ffffff;
+
+      --shadow: 0 20px 60px rgba(92, 67, 78, 0.12);
+      --soft-shadow: 0 10px 35px rgba(92, 67, 78, 0.10);
+      --radius: 24px;
+    }
+
+    /* ============================================================
+       RESET
+       ============================================================ */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--dark);
+      background: var(--cream);
+      overflow-x: hidden;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ============================================================
+       LOADER
+       ============================================================ */
+
+    #loader {
+      position: fixed;
+      inset: 0;
+
+      background: linear-gradient(
+        135deg,
+        #fff8f8,
+        #f1ecff,
+        #eef7ff
+      );
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      z-index: 99999;
+
+      transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+    }
+
+    #loader.hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader-content {
+      text-align: center;
+    }
+
+    .loader-heart {
+      font-size: 45px;
+      animation: heartbeat 1.3s infinite;
+    }
+
+    .loader-text {
+      margin-top: 15px;
+
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.25);
+      }
+    }
+
+    /* ============================================================
+       FLOATING PARTICLES
+       ============================================================ */
+
+    #particles {
+      position: fixed;
+      inset: 0;
+
+      pointer-events: none;
+      z-index: 20;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      bottom: -30px;
+
+      opacity: 0.6;
+
+      animation: floatUp linear forwards;
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 0.7;
+      }
+
+      90% {
+        opacity: 0.5;
+      }
+
+      to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+
+    .hero {
+      min-height: 100vh;
+
+      position: relative;
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at 20% 20%,
+          rgba(248, 223, 229, 0.9),
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at 80% 30%,
+          rgba(222, 216, 245, 0.9),
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at 50% 90%,
+          rgba(217, 234, 250, 0.8),
+          transparent 35%
+        ),
+        var(--cream);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      border-radius: 50%;
+      filter: blur(2px);
+      opacity: 0.35;
+    }
+
+    .hero::before {
+      width: 350px;
+      height: 350px;
+
+      background: var(--pink);
+
+      left: -150px;
+      top: -120px;
+    }
+
+    .hero::after {
+      width: 400px;
+      height: 400px;
+
+      background: var(--lavender);
+
+      right: -180px;
+      bottom: -180px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 5;
+
+      max-width: 900px;
+      padding: 30px;
+    }
+
+    .small-label {
+      font-size: 12px;
+      text-transform: uppercase;
+
+      letter-spacing: 4px;
+
+      color: var(--muted);
+
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-family: "Great Vibes", cursive;
+
+      font-size: clamp(65px, 11vw, 135px);
+      font-weight: 400;
+
+      line-height: 0.95;
+
+      color: #765c67;
+
+      text-shadow:
+        0 8px 30px rgba(120, 90, 105, 0.12);
+    }
+
+    .hero-name {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: clamp(32px, 5vw, 55px);
+
+      font-weight: 600;
+
+      color: #80636e;
+
+      margin-top: 15px;
+
+      letter-spacing: 2px;
+    }
+
+    .hero-subtitle {
+      max-width: 650px;
+
+      margin: 30px auto 40px;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: clamp(21px, 3vw, 30px);
+
+      line-height: 1.4;
+
+      color: #665a60;
+    }
+
+    .hero-button {
+      border: none;
+      cursor: pointer;
+
+      padding: 17px 30px;
+
+      border-radius: 100px;
+
+      background: rgba(255,255,255,0.7);
+
+      backdrop-filter: blur(15px);
+
+      border: 1px solid rgba(255,255,255,0.9);
+
+      color: #5e5057;
+
+      font-size: 14px;
+      letter-spacing: 1px;
+
+      box-shadow: var(--soft-shadow);
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+    }
+
+    .hero-button:hover {
+      transform: translateY(-4px);
+
+      background: white;
+
+      box-shadow:
+        0 18px 40px rgba(92, 67, 78, 0.16);
+    }
+
+    .scroll-hint {
+      position: absolute;
+
+      bottom: 25px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      font-size: 11px;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      color: var(--muted);
+
+      opacity: 0.7;
+    }
+
+    /* ============================================================
+       GENERAL SECTIONS
+       ============================================================ */
+
+    section {
+      position: relative;
+
+      padding: 120px 7%;
+    }
+
+    .section-container {
+      max-width: 1150px;
+
+      margin: auto;
+    }
+
+    .section-label {
+      text-align: center;
+
+      font-size: 11px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 4px;
+
+      color: var(--gold);
+
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      text-align: center;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: clamp(40px, 5vw, 64px);
+
+      font-weight: 500;
+
+      color: #594d53;
+
+      margin-bottom: 55px;
+    }
+
+    /* ============================================================
+       MESSAGE
+       ============================================================ */
+
+    .message-section {
+      background:
+        linear-gradient(
+          180deg,
+          var(--cream),
+          #fff7f8
+        );
+    }
+
+    .message-card {
+      max-width: 850px;
+
+      margin: auto;
+
+      padding: clamp(35px, 6vw, 75px);
+
+      background: rgba(255,255,255,0.62);
+
+      backdrop-filter: blur(20px);
+
+      border: 1px solid rgba(255,255,255,0.9);
+
+      border-radius: 35px;
+
+      box-shadow: var(--shadow);
+
+      text-align: center;
+
+      position: relative;
+    }
+
+    .message-card::before {
+      content: "♡";
+
+      position: absolute;
+
+      top: 25px;
+      left: 30px;
+
+      font-size: 28px;
+
+      color: var(--pink);
+    }
+
+    .message-card::after {
+      content: "✦";
+
+      position: absolute;
+
+      bottom: 25px;
+      right: 30px;
+
+      font-size: 22px;
+
+      color: var(--gold);
+    }
+
+    .message-card h3 {
+      font-family: "Great Vibes", cursive;
+
+      font-size: 48px;
+
+      font-weight: 400;
+
+      color: #80636e;
+
+      margin-bottom: 30px;
+    }
+
+    .message-card p {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 23px;
+
+      line-height: 1.8;
+
+      color: #675b61;
+    }
+
+    /* ============================================================
+       HINDI SHAYARI
+       ============================================================ */
+
+    .shayari-section {
+      min-height: 500px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at 15% 30%,
+          rgba(248, 223, 229, 0.8),
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at 85% 70%,
+          rgba(222, 216, 245, 0.8),
+          transparent 35%
+        ),
+        linear-gradient(
+          135deg,
+          #fff8f4,
+          #f5efff,
+          #edf7ff
+        );
+    }
+
+    .shayari-card {
+      max-width: 900px;
+
+      padding: clamp(35px, 6vw, 70px);
+
+      background: rgba(255,255,255,0.58);
+
+      backdrop-filter: blur(18px);
+
+      border: 1px solid rgba(255,255,255,0.85);
+
+      border-radius: 35px;
+
+      box-shadow: var(--shadow);
+
+      position: relative;
+    }
+
+    .shayari-symbol {
+      font-size: 35px;
+
+      color: var(--gold);
+
+      margin-bottom: 20px;
+    }
+
+    .shayari-card h2 {
+      font-family: "Great Vibes", cursive;
+
+      font-size: 48px;
+
+      font-weight: 400;
+
+      color: #80636e;
+
+      margin-bottom: 30px;
+    }
+
+    .shayari-text {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: clamp(24px, 4vw, 34px);
+
+      line-height: 1.8;
+
+      color: #675b61;
+    }
+
+    .shayari-highlight {
+      color: #b8788c;
+
+      font-weight: 600;
+    }
+
+    .shayari-ending {
+      margin-top: 25px;
+
+      font-family: "Great Vibes", cursive;
+
+      font-size: 34px;
+
+      color: #80636e;
+    }
+
+    /* ============================================================
+       QUOTE
+       ============================================================ */
+
+    .quote-section {
+      min-height: 430px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f5efff,
+          #fff8f4,
+          #edf7ff
+        );
+    }
+
+    .quote {
+      max-width: 900px;
+    }
+
+    .quote-symbol {
+      font-size: 35px;
+
+      color: var(--gold);
+
+      margin-bottom: 20px;
+    }
+
+    .quote p {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: clamp(34px, 5vw, 58px);
+
+      line-height: 1.15;
+
+      color: #63565d;
+    }
+
+    .quote-author {
+      margin-top: 25px;
+
+      font-size: 12px;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      color: var(--muted);
+    }
+
+    /* ============================================================
+       PHOTO GALLERY
+       ============================================================ */
+
+    .memories-section {
+      background: #fffaf8;
+    }
+
+    .gallery {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 35px;
+
+      align-items: center;
+    }
+
+    .photo-card {
+      background: white;
+
+      padding: 12px 12px 25px;
+
+      border-radius: 8px;
+
+      box-shadow: var(--soft-shadow);
+
+      cursor: pointer;
+
+      transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease;
+    }
+
+    .photo-card:nth-child(1) {
+      transform: rotate(-3deg);
+    }
+
+    .photo-card:nth-child(2) {
+      transform: rotate(2deg);
+    }
+
+    .photo-card:nth-child(3) {
+      transform: rotate(-1deg);
+    }
+
+    .photo-card:nth-child(4) {
+      transform: rotate(2.5deg);
+    }
+
+    .photo-card:nth-child(5) {
+      transform: rotate(-2deg);
+    }
+
+    .photo-card:nth-child(6) {
+      transform: rotate(3deg);
+    }
+
+    .photo-card:hover {
+      transform:
+        translateY(-10px)
+        rotate(0deg)
+        scale(1.02);
+
+      box-shadow:
+        0 25px 60px rgba(92, 67, 78, 0.18);
+    }
+
+    .photo-placeholder {
+      height: 310px;
+
+      overflow: hidden;
+
+      border-radius: 5px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f8dfe5,
+          #ded8f5,
+          #d9eafa
+        );
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      color: rgba(80,70,80,0.5);
+
+      font-family:
+        "Cormorant Garamond",
+        serif;
+
+      font-size: 22px;
+    }
+
+    .photo-placeholder img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition:
+        transform 0.6s ease;
+    }
+
+    .photo-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .photo-caption {
+      text-align: center;
+
+      margin-top: 17px;
+
+      font-family:
+        "Cormorant Garamond",
+        serif;
+
+      font-size: 21px;
+
+      color: #675a61;
+    }
+
+    /* ============================================================
+       LIGHTBOX
+       ============================================================ */
+
+    .lightbox {
+      position: fixed;
+
+      inset: 0;
+
+      background:
+        rgba(35, 29, 34, 0.88);
+
+      display: none;
+
+      align-items: center;
+      justify-content: center;
+
+      z-index: 9990;
+
+      padding: 30px;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox-content {
+      max-width: 900px;
+
+      max-height: 85vh;
+
+      position: relative;
+    }
+
+    .lightbox-content img {
+      max-height: 80vh;
+
+      max-width: 90vw;
+
+      border-radius: 12px;
+
+      box-shadow:
+        0 30px 100px rgba(0,0,0,0.4);
+    }
+
+    .close-lightbox {
+      position: absolute;
+
+      right: -10px;
+      top: -50px;
+
+      border: none;
+
+      background: none;
+
+      color: white;
+
+      font-size: 30px;
+
+      cursor: pointer;
+    }
+
+    /* ============================================================
+       REASONS
+       ============================================================ */
+
+    .reasons-section {
+      background:
+        linear-gradient(
+          180deg,
+          #fffaf8,
+          #f7f3ff
+        );
+    }
+
+    .reasons-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .reason-card {
+      min-height: 190px;
+
+      padding: 30px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      border-radius: var(--radius);
+
+      background:
+        rgba(255,255,255,0.6);
+
+      backdrop-filter: blur(15px);
+
+      border:
+        1px solid rgba(255,255,255,0.8);
+
+      box-shadow: var(--soft-shadow);
+
+      transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+    }
+
+    .reason-card:hover {
+      transform: translateY(-8px);
+
+      box-shadow:
+        0 20px 50px rgba(92, 67, 78, 0.14);
+    }
+
+    .reason-icon {
+      font-size: 32px;
+
+      margin-bottom: 15px;
+    }
+
+    .reason-card h3 {
+      font-family:
+        "Cormorant Garamond",
+        serif;
+
+      font-size: 25px;
+
+      font-weight: 600;
+
+      color: #66575f;
+    }
+
+    .reason-card p {
+      margin-top: 8px;
+
+      font-size: 13px;
+
+      color: var(--muted);
+    }
+
+    /* ============================================================
+       COUNTDOWN
+       ============================================================ */
+
+    .countdown-section {
+      background:
+        radial-gradient(
+          circle at center,
+          #f1ebff,
+          #fff9f6
+        );
+
+      text-align: center;
+    }
+
+    .countdown {
+      max-width: 850px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 15px;
+    }
+
+    .time-box {
+      padding: 30px 10px;
+
+      background:
+        rgba(255,255,255,0.65);
+
+      backdrop-filter: blur(15px);
+
+      border-radius: 20px;
+
+      border:
+        1px solid rgba(255,255,255,0.8);
+
+      box-shadow: var(--soft-shadow);
+    }
+
+    .time-number {
+      font-family:
+        "Cormorant Garamond",
+        serif;
+
+      font-size: clamp(40px, 6vw, 65px);
+
+      line-height: 1;
+
+      color: #715d67;
+    }
+
+    .time-label {
+      margin-top: 10px;
+
+      font-size: 11px;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      color: var(--muted);
+    }
+
+    .birthday-message {
+      margin-top: 35px;
+
+      font-family:
+        "Great Vibes",
+        cursive;
+
+      font-size: 40px;
+
+      color: #80636e;
+
+      display: none;
+    }
+
+    .birthday-message.show {
+      display: block;
+
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ============================================================
+       FINAL MESSAGE
+       ============================================================ */
+
+    .final-section {
+      min-height: 550px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff1f4,
+          #f1edff,
+          #edf7ff
+        );
+    }
+
+    .final-content {
+      max-width: 800px;
+    }
+
+    .final-heart {
+      font-size: 60px;
+
+      color: #d88fa2;
+
+      animation: heartbeat 1.5s infinite;
+
+      margin-bottom: 25px;
+    }
+
+    .final-content h2 {
+      font-family:
+        "Great Vibes",
+        cursive;
+
+      font-size:
+        clamp(55px, 8vw, 95px);
+
+      font-weight: 400;
+
+      color: #765c67;
+
+      margin-bottom: 25px;
+    }
+
+    .final-content p {
+      font-family:
+        "Cormorant Garamond",
+        serif;
+
+      font-size: 25px;
+
+      line-height: 1.6;
+
+      color: #675b61;
+    }
+
+    .signature {
+      margin-top: 35px;
+
+      font-family:
+        "Great Vibes",
+        cursive;
+
+      font-size: 38px;
+
+      color: #80636e;
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+
+    footer {
+      padding: 30px 20px;
+
+      text-align: center;
+
+      background: #fff8f6;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      letter-spacing: 1px;
+    }
+
+    /* ============================================================
+       MUSIC BUTTON
+       ============================================================ */
+
+    .music-button {
+      position: fixed;
+
+      right: 25px;
+      bottom: 25px;
+
+      width: 52px;
+      height: 52px;
+
+      border-radius: 50%;
+
+      border: 1px solid
+        rgba(255,255,255,0.9);
+
+      background:
+        rgba(255,255,255,0.75);
+
+      backdrop-filter: blur(15px);
+
+      box-shadow: var(--soft-shadow);
+
+      cursor: pointer;
+
+      font-size: 20px;
+
+      z-index: 100;
+
+      transition:
+        transform 0.3s ease;
+    }
+
+    .music-button:hover {
+      transform: scale(1.08);
+    }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+
+    @media (max-width: 900px) {
+
+      .gallery {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .reasons-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 650px) {
+
+      section {
+        padding: 80px 5%;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+
+        max-width: 420px;
+
+        margin: auto;
+      }
+
+      .reasons-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .countdown {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .photo-placeholder {
+        height: 350px;
+      }
+
+      .message-card p {
+        font-size: 20px;
+      }
+
+      .quote p {
+        font-size: 38px;
+      }
+
+      .shayari-text {
+        font-size: 24px;
+      }
+
+      .hero-name {
+        font-size: 36px;
+      }
+
+    }
+
+    @media (max-width: 400px) {
+
+      .hero-content {
+        padding: 20px;
+      }
+
+      .countdown {
+        gap: 10px;
+      }
+
+      .time-box {
+        padding: 25px 5px;
+      }
+
+      .time-number {
+        font-size: 40px;
+      }
+
+      .shayari-card {
+        padding: 30px 20px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       LOADER
+       ============================================================ -->
+
+  <div id="loader">
+
+    <div class="loader-content">
+
+      <div class="loader-heart">
+        ♡
+      </div>
+
+      <div class="loader-text">
+        Preparing something special for Sakshi...
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ============================================================
+       FLOATING PARTICLES
+       ============================================================ -->
+
+  <div id="particles"></div>
+
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <div class="small-label">
+        A little something for you
+      </div>
+
+      <h1>
+        Happy Birthday
+      </h1>
+
+      <div class="hero-name">
+        Sakshi ♡
+      </div>
+
+      <p class="hero-subtitle">
+
+        Today is all about celebrating the beautiful person you are
+        and all the happiness you bring into the world. ♡
+
+      </p>
+
+      <button
+        class="hero-button"
+        onclick="scrollToSection('message')"
+      >
+
+        Open Your Birthday Surprise ♡
+
+      </button>
+
+    </div>
+
+    <div class="scroll-hint">
+      Scroll to explore ↓
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       MESSAGE
+       ============================================================ -->
+
+  <section
+    class="message-section"
+    id="message"
+  >
+
+    <div class="section-container">
+
+      <div class="section-label">
+        A message for you
+      </div>
+
+      <h2 class="section-title">
+        From the heart
+      </h2>
+
+      <div class="message-card">
+
+        <h3>
+          Dear Sakshi ♡
+        </h3>
+
+        <p>
+
+          On your special day, I just want you to know how truly
+          wonderful you are. May your life always be filled with
+          moments that make your heart smile, people who make you
+          feel loved, and dreams that make you excited to wake up
+          every morning.
+
+          <br><br>
+
+          I hope this new chapter brings you countless beautiful
+          memories, peaceful moments, unexpected adventures, and
+          everything your heart quietly wishes for.
+
+          <br><br>
+
+          Never forget how special you are, Sakshi.
+
+          <br><br>
+
+          Happy Birthday. ♡
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       HINDI SHAYARI
+       ============================================================ -->
+
+  <section class="shayari-section">
+
+    <div class="shayari-card">
+
+      <div class="shayari-symbol">
+        ✦
+      </div>
+
+      <h2>
+        Tumhare Liye ♡
+      </h2>
+
+      <div class="shayari-text">
+
+        <span class="shayari-highlight">
+          "कुछ रिश्ते अल्फ़ाज़ों के मोहताज़ नहीं होते,
+        </span>
+
+        <br>
+
+        बस दिल से जुड़े होते हैं और बेहद खास होते हैं।
+
+        <br><br>
+
+        तुम्हारी मुस्कान यूँ ही हमेशा खिलती रहे,
+
+        <br>
+
+        तुम्हारी ज़िंदगी खुशियों से हर पल मिलती रहे।
+
+        <br><br>
+
+        हर ख्वाब तुम्हारा हकीकत बन जाए,
+
+        <br>
+
+        और हर आने वाला साल तुम्हारे लिए
+        एक खूबसूरत कहानी बन जाए।"
+
+      </div>
+
+      <div class="shayari-ending">
+        जन्मदिन मुबारक हो, Sakshi ♡
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       QUOTE
+       ============================================================ -->
+
+  <section class="quote-section">
+
+    <div class="quote">
+
+      <div class="quote-symbol">
+        ✦
+      </div>
+
+      <p>
+        "May your birthday be the beginning
+        of a year as beautiful as your soul."
+      </p>
+
+      <div class="quote-author">
+        With love ♡
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       MEMORIES / PHOTO GALLERY
+       ============================================================ -->
+
+  <section
+    class="memories-section"
+    id="memories"
+  >
+
+    <div class="section-container">
+
+      <div class="section-label">
+        Little moments
+      </div>
+
+      <h2 class="section-title">
+        Our Memories ♡
+      </h2>
+
+      <div class="gallery">
+
+
+        <!-- PHOTO 1 -->
+
+        <div
+          class="photo-card"
+          onclick="openLightbox(this)"
+        >
+
+          <div class="photo-placeholder">
+
+            <img
+              src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=80"
+              alt="Beautiful memory"
+            >
+
+          </div>
+
+          <div class="photo-caption">
+            A beautiful moment
+          </div>
+
+        </div>
+
+
+        <!-- PHOTO 2 -->
+
+        <div
+          class="photo-card"
+          onclick="openLightbox(this)"
+        >
+
+          <div class="photo-placeholder">
+
+            <img
+              src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=80"
+              alt="Happy memory"
+            >
+
+          </div>
+
+          <div class="photo-caption">
+            One of my favorites
+          </div>
+
+        </div>
+
+
+        <!-- PHOTO 3 -->
+
+        <div
+          class="photo-card"
+          onclick="openLightbox(this)"
+        >
+
+          <div class="photo-placeholder">
+
+            <img
+              src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=80"
+              alt="Flowers"
+            >
+
+          </div>
+
+          <div class="photo-caption">
+            You make life brighter
+          </div>
+
+        </div>
+
+
+        <!-- PHOTO 4 -->
+
+        <div
+          class="photo-card"
+          onclick="openLightbox(this)"
+        >
+
+          <div class="photo-placeholder">
+
+            <img
+              src="https://images.unsplash.com/photo-1518568740560-333139a27e72?auto=format&fit=crop&w=800&q=80"
+              alt="Love and memories"
+            >
+
+          </div>
+
+          <div class="photo-caption">
+            Forever a special memory
+          </div>
+
+        </div>
+
+
+        <!-- PHOTO 5 -->
+
+        <div
+          class="photo-card"
+          onclick="openLightbox(this)"
+        >
+
+          <div class="photo-placeholder">
+
+            <img
+              src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=800&q=80"
+              alt="Sunset memory"
+            >
+
+          </div>
+
+          <div class="photo-caption">
+            Moments worth remembering
+          </div>
+
+        </div>
+
+
+        <!-- PHOTO 6 -->
+
+        <div
+          class="photo-card"
+          onclick="openLightbox(this)"
+        >
+
+          <div class="photo-placeholder">
+
+            <img
+              src="https://images.unsplash.com/photo-1513159446162-54eb8bdaa79b?auto=format&fit=crop&w=800&q=80"
+              alt="Birthday celebration"
+            >
+
+          </div>
+
+          <div class="photo-caption">
+            Here's to many more
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       LIGHTBOX
+       ============================================================ -->
+
+  <div
+    class="lightbox"
+    id="lightbox"
+    onclick="closeLightbox(event)"
+  >
+
+    <div class="lightbox-content">
+
+      <button
+        class="close-lightbox"
+        onclick="closeLightbox()"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <img
+        id="lightbox-image"
+        src=""
+        alt="Expanded memory"
+      >
+
+    </div>
+
+  </div>
+
+
+  <!-- ============================================================
+       REASONS
+       ============================================================ -->
+
+  <section
+    class="reasons-section"
+    id="reasons"
+  >
+
+    <div class="section-container">
+
+      <div class="section-label">
+        Just because
+      </div>
+
+      <h2 class="section-title">
+        A Few Things I Love About You
+      </h2>
+
+      <div class="reasons-grid">
+
+
+        <div class="reason-card">
+
+          <div class="reason-icon">
+            🌸
+          </div>
+
+          <h3>
+            Your Smile
+          </h3>
+
+          <p>
+            It has a way of making everything feel a little better.
+          </p>
+
+        </div>
+
+
+        <div class="reason-card">
+
+          <div class="reason-icon">
+            ✨
+          </div>
+
+          <h3>
+            Your Energy
+          </h3>
+
+          <p>
+            You bring a special kind of light wherever you go.
+          </p>
+
+        </div>
+
+
+        <div class="reason-card">
+
+          <div class="reason-icon">
+            💕
+          </div>
+
+          <h3>
+            Your Heart
+          </h3>
+
+          <p>
+            Kind, caring, genuine and beautifully yours.
+          </p>
+
+        </div>
+
+
+        <div class="reason-card">
+
+          <div class="reason-icon">
+            🌙
+          </div>
+
+          <h3>
+            Your Presence
+          </h3>
+
+          <p>
+            Somehow everything feels calmer when you're around.
+          </p>
+
+        </div>
+
+
+        <div class="reason-card">
+
+          <div class="reason-icon">
+            🦋
+          </div>
+
+          <h3>
+            Your Uniqueness
+          </h3>
+
+          <p>
+            There is simply nobody else quite like you.
+          </p>
+
+        </div>
+
+
+        <div class="reason-card">
+
+          <div class="reason-icon">
+            🎀
+          </div>
+
+          <h3>
+            Just You
+          </h3>
+
+          <p>
+            You are more than enough exactly as you are.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       COUNTDOWN
+       ============================================================ -->
+
+  <section
+    class="countdown-section"
+    id="countdown"
+  >
+
+    <div class="section-container">
+
+      <div class="section-label">
+        Counting down
+      </div>
+
+      <h2 class="section-title">
+        Until Sakshi's Birthday ♡
+      </h2>
+
+      <div class="countdown">
+
+
+        <div class="time-box">
+
+          <div
+            class="time-number"
+            id="days"
+          >
+            00
+          </div>
+
+          <div class="time-label">
+            Days
+          </div>
+
+        </div>
+
+
+        <div class="time-box">
+
+          <div
+            class="time-number"
+            id="hours"
+          >
+            00
+          </div>
+
+          <div class="time-label">
+            Hours
+          </div>
+
+        </div>
+
+
+        <div class="time-box">
+
+          <div
+            class="time-number"
+            id="minutes"
+          >
+            00
+          </div>
+
+          <div class="time-label">
+            Minutes
+          </div>
+
+        </div>
+
+
+        <div class="time-box">
+
+          <div
+            class="time-number"
+            id="seconds"
+          >
+            00
+          </div>
+
+          <div class="time-label">
+            Seconds
+          </div>
+
+        </div>
+
+
+      </div>
+
+      <div
+        class="birthday-message"
+        id="birthdayMessage"
+      >
+        Happy Birthday Sakshi! 🎂♡
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       FINAL MESSAGE
+       ============================================================ -->
+
+  <section class="final-section">
+
+    <div class="final-content">
+
+      <div class="final-heart">
+        ♡
+      </div>
+
+      <h2>
+        Here's to You, Sakshi
+      </h2>
+
+      <p>
+
+        May this year bring you closer to everything
+        you've been dreaming about.
+
+        <br>
+
+        May you laugh more, love deeply, travel far,
+        create beautiful memories, and always remember
+        just how loved you are.
+
+      </p>
+
+      <div class="signature">
+        Happy Birthday, Sakshi ♡
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+
+  <footer>
+
+    Made with ♡ especially for Sakshi
+
+  </footer>
+
+
+  <!-- ============================================================
+       MUSIC BUTTON
+       ============================================================ -->
+
+  <button
+    class="music-button"
+    id="musicButton"
+    onclick="toggleMusic()"
+    aria-label="Toggle music"
+  >
+    ♪
+  </button>
+
+
+  <!-- ============================================================
+       AUDIO
+       ============================================================
+
+       To add your own music:
+
+       1. Put an MP3 file in the same folder as this HTML file.
+       2. Name it "birthday.mp3".
+       3. Uncomment the audio tag below.
+
+  -->
+
+  <!--
+  <audio
+    id="birthdayMusic"
+    loop
+  >
+    <source
+      src="birthday.mp3"
+      type="audio/mpeg"
+    >
+  </audio>
+  -->
+
+
+  <script>
+
+    /* ============================================================
+       PAGE LOADER
+       ============================================================ */
+
+    window.addEventListener("load", function() {
+
+      setTimeout(function() {
+
+        document
+          .getElementById("loader")
+          .classList
+          .add("hide");
+
+      }, 1000);
+
+    });
+
+
+    /* ============================================================
+       SMOOTH SCROLL
+       ============================================================ */
+
+    function scrollToSection(id) {
+
+      const section =
+        document.getElementById(id);
+
+      if (section) {
+
+        section.scrollIntoView({
+          behavior: "smooth"
+        });
+
+      }
+
+    }
+
+
+    /* ============================================================
+       FLOATING PARTICLES
+       ============================================================ */
+
+    const particles =
+      document.getElementById("particles");
+
+    const particleSymbols = [
+      "♡",
+      "♥",
+      "✦",
+      "✧",
+      "•",
+      "❀"
+    ];
+
+    function createParticle() {
+
+      const particle =
+        document.createElement("div");
+
+      particle.className =
+        "particle";
+
+      particle.innerText =
+        particleSymbols[
+          Math.floor(
+            Math.random() *
+            particleSymbols.length
+          )
+        ];
+
+      particle.style.left =
+        Math.random() * 100 + "%";
+
+      particle.style.fontSize =
+        (10 + Math.random() * 20) + "px";
+
+      particle.style.animationDuration =
+        (8 + Math.random() * 10) + "s";
+
+      particle.style.color =
+        [
+          "#efb8c5",
+          "#c9a96e",
+          "#ded8f5",
+          "#d9eafa"
+        ][
+          Math.floor(
+            Math.random() * 4
+          )
+        ];
+
+      particles.appendChild(particle);
+
+      setTimeout(function() {
+
+        particle.remove();
+
+      }, 20000);
+
+    }
+
+    setInterval(createParticle, 700);
+
+
+    /* ============================================================
+       LIGHTBOX
+       ============================================================ */
+
+    function openLightbox(card) {
+
+      const image =
+        card.querySelector("img");
+
+      if (!image) {
+        return;
+      }
+
+      const lightbox =
+        document.getElementById("lightbox");
+
+      const lightboxImage =
+        document.getElementById("lightbox-image");
+
+      lightboxImage.src =
+        image.src;
+
+      lightboxImage.alt =
+        image.alt;
+
+      lightbox.classList.add("active");
+
+      document.body.style.overflow =
+        "hidden";
+
+    }
+
+
+    function closeLightbox(event) {
+
+      if (
+        event &&
+        event.target &&
+        event.target.id !== "lightbox"
+      ) {
+
+        return;
+
+      }
+
+      document
+        .getElementById("lightbox")
+        .classList
+        .remove("active");
+
+      document.body.style.overflow =
+        "";
+
+    }
+
+
+    /* Close lightbox with Escape */
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Escape") {
+
+          document
+            .getElementById("lightbox")
+            .classList
+            .remove("active");
+
+          document.body.style.overflow =
+            "";
+
+        }
+
+      }
+    );
+
+
+    /* ============================================================
+       COUNTDOWN
+       ============================================================
+
+       SAKSHI'S BIRTHDAY:
+       11 NOVEMBER
+
+       JavaScript months start from 0:
+       January = 0
+       February = 1
+       ...
+       November = 10
+
+    */
+
+    const birthdayMonth = 10;
+    const birthdayDay = 11;
+
+
+    function getNextBirthday() {
+
+      const now =
+        new Date();
+
+      let year =
+        now.getFullYear();
+
+      let birthday =
+        new Date(
+          year,
+          birthdayMonth,
+          birthdayDay,
+          0,
+          0,
+          0
+        );
+
+      if (birthday <= now) {
+
+        birthday =
+          new Date(
+            year + 1,
+            birthdayMonth,
+            birthdayDay,
+            0,
+            0,
+            0
+          );
+
+      }
+
+      return birthday;
+
+    }
+
+
+    function updateCountdown() {
+
+      const now =
+        new Date();
+
+      const birthday =
+        getNextBirthday();
+
+      const difference =
+        birthday.getTime() -
+        now.getTime();
+
+
+      if (difference <= 0) {
+
+        document
+          .getElementById("days")
+          .innerText = "00";
+
+        document
+          .getElementById("hours")
+          .innerText = "00";
+
+        document
+          .getElementById("minutes")
+          .innerText = "00";
+
+        document
+          .getElementById("seconds")
+          .innerText = "00";
+
+        document
+          .getElementById("birthdayMessage")
+          .classList
+          .add("show");
+
+        return;
+
+      }
+
+
+      const days =
+        Math.floor(
+          difference /
+          (1000 * 60 * 60 * 24)
+        );
+
+
+      const hours =
+        Math.floor(
+          (difference /
+          (1000 * 60 * 60)) %
+          24
+        );
+
+
+      const minutes =
+        Math.floor(
+          (difference /
+          (1000 * 60)) %
+          60
+        );
+
+
+      const seconds =
+        Math.floor(
+          (difference /
+          1000) %
+          60
+        );
+
+
+      document
+        .getElementById("days")
+        .innerText =
+        String(days).padStart(2, "0");
+
+
+      document
+        .getElementById("hours")
+        .innerText =
+        String(hours).padStart(2, "0");
+
+
+      document
+        .getElementById("minutes")
+        .innerText =
+        String(minutes).padStart(2, "0");
+
+
+      document
+        .getElementById("seconds")
+        .innerText =
+        String(seconds).padStart(2, "0");
+
+    }
+
+
+    updateCountdown();
+
+    setInterval(
+      updateCountdown,
+      1000
+    );
+
+
+    /* ============================================================
+       MUSIC
+       ============================================================ */
+
+    let musicPlaying = false;
+
+
+    function toggleMusic() {
+
+      /*
+        If you want music, uncomment the <audio> element
+        near the bottom of the HTML.
+      */
+
+      const music =
+        document.getElementById(
+          "birthdayMusic"
+        );
+
+
+      if (!music) {
+
+        alert(
+          "Add your birthday.mp3 file and uncomment the audio code to enable music."
+        );
+
+        return;
+
+      }
+
+
+      if (musicPlaying) {
+
+        music.pause();
+
+        musicPlaying = false;
+
+        document
+          .getElementById("musicButton")
+          .innerText = "♪";
+
+      } else {
+
+        music.play()
+          .then(function() {
+
+            musicPlaying = true;
+
+            document
+              .getElementById("musicButton")
+              .innerText = "♫";
+
+          })
+          .catch(function() {
+
+            alert(
+              "Please interact with the page first before playing music."
+            );
+
+          });
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
